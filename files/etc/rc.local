@@ -1,0 +1,8 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+
+mkdir -p /tmp/nginx
+mount -o noatime,nodiratime,ro -t vfat /dev/sda1 /usbstorage
+/usr/sbin/nginx
+
+exit 0
